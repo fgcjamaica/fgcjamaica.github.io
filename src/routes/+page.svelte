@@ -21,7 +21,7 @@
 		</div>
 	</div>
 	<div class="call-to-action">
-		<a href="/team">Meet the Team</a>
+		<a href="#">Meet the Team</a>
 	</div>
 </section>
 

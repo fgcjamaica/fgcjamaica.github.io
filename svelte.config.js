@@ -1,19 +1,18 @@
-import adapter from '@sveltejs/adapter-auto';
 import preprocess from 'svelte-preprocess';
+import adapter from '@sveltejs/adapter-static';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	// Consult https://github.com/sveltejs/svelte-preprocess
-	// for more information about preprocessors
-	preprocess: preprocess(),
-
+  preprocess: preprocess(),
 	kit: {
-		adapter: adapter(),
-
-		// Override http methods in the Todo forms
-		methodOverride: {
-			allowed: ['PATCH', 'DELETE']
-		}
+		prerender: {
+			default: true,
+		},
+		adapter: adapter({
+			pages: 'build',  // path to public directory
+			assets: 'build',  // path to public directory
+			fallback: null
+		})
 	}
 };
 
