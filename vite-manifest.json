@@ -1,0 +1,172 @@
+{
+  "src/routes/image.png": {
+    "file": "_app/immutable/assets/image-a4c9ac3b.png",
+    "src": "src/routes/image.png"
+  },
+  "src/lib/Header/svelte-logo.svg": {
+    "file": "_app/immutable/assets/svelte-logo-87df40b8.svg",
+    "src": "src/lib/Header/svelte-logo.svg"
+  },
+  "src/lib/SocialBar/github.svg": {
+    "file": "_app/immutable/assets/github-b2bdc513.svg",
+    "src": "src/lib/SocialBar/github.svg"
+  },
+  "src/lib/SocialBar/instagram.svg": {
+    "file": "_app/immutable/assets/instagram-3a4f962a.svg",
+    "src": "src/lib/SocialBar/instagram.svg"
+  },
+  "src/routes/ja-flag.svg": {
+    "file": "_app/immutable/assets/ja-flag-40bb1750.svg",
+    "src": "src/routes/ja-flag.svg"
+  },
+  "node_modules/.pnpm/@fontsource+bebas-neue@4.5.8/node_modules/@fontsource/bebas-neue/files/bebas-neue-latin-ext-400-normal.woff2": {
+    "file": "_app/immutable/assets/bebas-neue-latin-ext-400-normal-fc4a091c.woff2",
+    "src": "node_modules/.pnpm/@fontsource+bebas-neue@4.5.8/node_modules/@fontsource/bebas-neue/files/bebas-neue-latin-ext-400-normal.woff2"
+  },
+  "node_modules/.pnpm/@fontsource+bebas-neue@4.5.8/node_modules/@fontsource/bebas-neue/files/bebas-neue-latin-400-normal.woff2": {
+    "file": "_app/immutable/assets/bebas-neue-latin-400-normal-5b4101d4.woff2",
+    "src": "node_modules/.pnpm/@fontsource+bebas-neue@4.5.8/node_modules/@fontsource/bebas-neue/files/bebas-neue-latin-400-normal.woff2"
+  },
+  "node_modules/.pnpm/@fontsource+montserrat@4.5.12/node_modules/@fontsource/montserrat/files/montserrat-cyrillic-ext-400-normal.woff2": {
+    "file": "_app/immutable/assets/montserrat-cyrillic-ext-400-normal-68ce5e02.woff2",
+    "src": "node_modules/.pnpm/@fontsource+montserrat@4.5.12/node_modules/@fontsource/montserrat/files/montserrat-cyrillic-ext-400-normal.woff2"
+  },
+  "node_modules/.pnpm/@fontsource+montserrat@4.5.12/node_modules/@fontsource/montserrat/files/montserrat-cyrillic-400-normal.woff2": {
+    "file": "_app/immutable/assets/montserrat-cyrillic-400-normal-7849168d.woff2",
+    "src": "node_modules/.pnpm/@fontsource+montserrat@4.5.12/node_modules/@fontsource/montserrat/files/montserrat-cyrillic-400-normal.woff2"
+  },
+  "node_modules/.pnpm/@fontsource+montserrat@4.5.12/node_modules/@fontsource/montserrat/files/montserrat-latin-ext-400-normal.woff2": {
+    "file": "_app/immutable/assets/montserrat-latin-ext-400-normal-a663bd98.woff2",
+    "src": "node_modules/.pnpm/@fontsource+montserrat@4.5.12/node_modules/@fontsource/montserrat/files/montserrat-latin-ext-400-normal.woff2"
+  },
+  "node_modules/.pnpm/@fontsource+montserrat@4.5.12/node_modules/@fontsource/montserrat/files/montserrat-latin-400-normal.woff2": {
+    "file": "_app/immutable/assets/montserrat-latin-400-normal-ddc148b8.woff2",
+    "src": "node_modules/.pnpm/@fontsource+montserrat@4.5.12/node_modules/@fontsource/montserrat/files/montserrat-latin-400-normal.woff2"
+  },
+  "node_modules/.pnpm/@fontsource+bebas-neue@4.5.8/node_modules/@fontsource/bebas-neue/files/bebas-neue-all-400-normal.woff": {
+    "file": "_app/immutable/assets/bebas-neue-all-400-normal-55bda2f6.woff",
+    "src": "node_modules/.pnpm/@fontsource+bebas-neue@4.5.8/node_modules/@fontsource/bebas-neue/files/bebas-neue-all-400-normal.woff"
+  },
+  "node_modules/.pnpm/@fontsource+montserrat@4.5.12/node_modules/@fontsource/montserrat/files/montserrat-all-400-normal.woff": {
+    "file": "_app/immutable/assets/montserrat-all-400-normal-805f620f.woff",
+    "src": "node_modules/.pnpm/@fontsource+montserrat@4.5.12/node_modules/@fontsource/montserrat/files/montserrat-all-400-normal.woff"
+  },
+  "node_modules/.pnpm/@sveltejs+kit@1.0.0-next.443_svelte@3.49.0+vite@3.0.9/node_modules/@sveltejs/kit/src/runtime/client/start.js": {
+    "file": "_app/immutable/start-27b8fbb3.js",
+    "src": "node_modules/.pnpm/@sveltejs+kit@1.0.0-next.443_svelte@3.49.0+vite@3.0.9/node_modules/@sveltejs/kit/src/runtime/client/start.js",
+    "isEntry": true,
+    "imports": [
+      "_index-4e4f9b38.js",
+      "_singletons-1bfb5267.js"
+    ],
+    "dynamicImports": [
+      ".svelte-kit/generated/nodes/0.js",
+      ".svelte-kit/generated/nodes/1.js",
+      ".svelte-kit/generated/nodes/2.js"
+    ]
+  },
+  "src/routes/+layout.svelte": {
+    "file": "_app/immutable/components/pages/_layout.svelte-262191be.js",
+    "src": "src/routes/+layout.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-4e4f9b38.js"
+    ],
+    "css": [
+      "_app/immutable/assets/+layout-ddfdd069.css"
+    ],
+    "assets": [
+      "_app/immutable/assets/github-b2bdc513.svg",
+      "_app/immutable/assets/instagram-3a4f962a.svg",
+      "_app/immutable/assets/bebas-neue-latin-ext-400-normal-fc4a091c.woff2",
+      "_app/immutable/assets/bebas-neue-all-400-normal-55bda2f6.woff",
+      "_app/immutable/assets/bebas-neue-latin-400-normal-5b4101d4.woff2",
+      "_app/immutable/assets/montserrat-cyrillic-ext-400-normal-68ce5e02.woff2",
+      "_app/immutable/assets/montserrat-all-400-normal-805f620f.woff",
+      "_app/immutable/assets/montserrat-cyrillic-400-normal-7849168d.woff2",
+      "_app/immutable/assets/montserrat-latin-ext-400-normal-a663bd98.woff2",
+      "_app/immutable/assets/montserrat-latin-400-normal-ddc148b8.woff2"
+    ]
+  },
+  "node_modules/.pnpm/@sveltejs+kit@1.0.0-next.443_svelte@3.49.0+vite@3.0.9/node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
+    "file": "_app/immutable/components/error.svelte-183b79d8.js",
+    "src": "node_modules/.pnpm/@sveltejs+kit@1.0.0-next.443_svelte@3.49.0+vite@3.0.9/node_modules/@sveltejs/kit/src/runtime/components/error.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-4e4f9b38.js",
+      "_singletons-1bfb5267.js"
+    ]
+  },
+  "src/routes/+page.svelte": {
+    "file": "_app/immutable/components/pages/_page.svelte-9e43e168.js",
+    "src": "src/routes/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-4e4f9b38.js"
+    ],
+    "css": [
+      "_app/immutable/assets/+page-3949456e.css"
+    ],
+    "assets": [
+      "_app/immutable/assets/image-a4c9ac3b.png",
+      "_app/immutable/assets/ja-flag-40bb1750.svg"
+    ]
+  },
+  "src/routes/+page.ts": {
+    "file": "_app/immutable/modules/pages/_page.ts-e9fa0128.js",
+    "src": "src/routes/+page.ts",
+    "isEntry": true,
+    "imports": [
+      "__page-802cc2a3.js"
+    ]
+  },
+  "_singletons-1bfb5267.js": {
+    "file": "_app/immutable/chunks/singletons-1bfb5267.js",
+    "imports": [
+      "_index-4e4f9b38.js"
+    ]
+  },
+  "_index-4e4f9b38.js": {
+    "file": "_app/immutable/chunks/index-4e4f9b38.js"
+  },
+  "__page-802cc2a3.js": {
+    "file": "_app/immutable/chunks/_page-802cc2a3.js"
+  },
+  ".svelte-kit/generated/nodes/0.js": {
+    "file": "_app/immutable/chunks/0-441da78b.js",
+    "src": ".svelte-kit/generated/nodes/0.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/routes/+layout.svelte",
+      "_index-4e4f9b38.js"
+    ]
+  },
+  ".svelte-kit/generated/nodes/1.js": {
+    "file": "_app/immutable/chunks/1-d8455115.js",
+    "src": ".svelte-kit/generated/nodes/1.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "node_modules/.pnpm/@sveltejs+kit@1.0.0-next.443_svelte@3.49.0+vite@3.0.9/node_modules/@sveltejs/kit/src/runtime/components/error.svelte",
+      "_index-4e4f9b38.js",
+      "_singletons-1bfb5267.js"
+    ]
+  },
+  ".svelte-kit/generated/nodes/2.js": {
+    "file": "_app/immutable/chunks/2-f9392a12.js",
+    "src": ".svelte-kit/generated/nodes/2.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "__page-802cc2a3.js",
+      "src/routes/+page.svelte",
+      "_index-4e4f9b38.js"
+    ]
+  },
+  "src/routes/+layout.css": {
+    "file": "_app/immutable/assets/+layout-ddfdd069.css",
+    "src": "src/routes/+layout.css"
+  },
+  "src/routes/+page.css": {
+    "file": "_app/immutable/assets/+page-3949456e.css",
+    "src": "src/routes/+page.css"
+  }
+}
