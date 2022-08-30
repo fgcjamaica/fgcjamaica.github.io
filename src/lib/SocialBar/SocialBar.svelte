@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import github from '$lib/SocialBar/github.svg';
-	import instagram from '$lib/SocialBar/instagram.svg';
+	import github from '$lib/assets/github.svg';
+	import instagram from '$lib/assets/instagram.svg';
 </script>
 
 <ul class="logos">
@@ -11,6 +11,7 @@
 
 <style lang="scss">
 	.logos {
+		z-index: 10000;
 		margin-top: 50vh;
 		transform: translateY(-50%) translateX(-50%);
 

@@ -1,11 +1,9 @@
 <script lang="ts">
-	import Counter from '$lib/Counter.svelte';
+	import Head from '$lib/Head/Head.svelte';
 	import image from './image.png';
 </script>
 
-<svelte:head>
-	<title>Home</title>
-</svelte:head>
+<Head title="Home" />
 
 <section>
 	<h1 class="headline">
@@ -15,12 +13,10 @@
 	<h2 class="subhead">Representing Jamaica in the yearly FIRST Global Competition</h2>
 	<div class="img-container">
 		<img src={image} alt="collage of group meetings and robot" />
-		<div class="floaters">
-			<!-- TODO: add some floating elements -->
-		</div>
+		<div class="floaters" />
 	</div>
 	<div class="call-to-action">
-		<a href="#">Meet the Team</a>
+		<a href="/team">Meet the Team</a>
 	</div>
 </section>
 

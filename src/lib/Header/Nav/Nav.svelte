@@ -10,8 +10,8 @@
 <nav class:toggled>
 	<Hamburger onStateChange={toggleNav} />
 	<ul role="list">
-		<li><a href="#">Home</a></li>
-		<li><a href="#">Team</a></li>
+		<li><a href="/">Home</a></li>
+		<li><a href="/team">Team</a></li>
 		<li><a href="#">Blog</a></li>
 		<li><a href="#">Contact</a></li>
 	</ul>
@@ -19,6 +19,8 @@
 
 <style lang="scss">
 	nav {
+		z-index: 3000;
+
 		display: flex;
 		flex: 1;
 		justify-content: flex-end;
