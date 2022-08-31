@@ -1,9 +1,7 @@
-import type { Social } from "./Social";
+import type { Social } from './Social';
 
 export interface Profile {
-  id: string;
-  name: string;
-  socials: Social[];
+	id: string;
+	name: string;
+	socials: Social[];
 }
-
-

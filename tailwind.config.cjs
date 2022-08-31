@@ -1,4 +1,4 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require('tailwindcss/defaultTheme');
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	mode: 'jit',
@@ -6,8 +6,8 @@ module.exports = {
 	theme: {
 		screens: {
 			'2xs': { max: '280px' },
-			'xs': { max: '415px' },
-			...defaultTheme.screens,
+			xs: { max: '415px' },
+			...defaultTheme.screens
 		},
 		extend: {
 			fontFamily: {
@@ -23,7 +23,7 @@ module.exports = {
 				'bangladesh-green': '#017749',
 				'north-texas-green': '#009B3A',
 				dandelion: '#ffd477'
-			},
+			}
 		}
 	},
 	variants: {

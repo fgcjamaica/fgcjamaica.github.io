@@ -3,15 +3,15 @@ import adapter from '@sveltejs/adapter-static';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-  preprocess: [
+	preprocess: [
 		preprocess({
 			postcss: true
 		})
 	],
 	kit: {
 		adapter: adapter({
-			pages: 'build',  // path to public directory
-			assets: 'build',  // path to public directory
+			pages: 'build', // path to public directory
+			assets: 'build', // path to public directory
 			fallback: null
 		})
 	}
