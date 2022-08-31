@@ -1,0 +1,1 @@
+window.__sveltekit_data = (function(a,b){return {type:b,nodes:[null,{type:b,data:{profiles:[{id:"ajani-hickling",name:"Ajani Hickling",role:"Lead Developer"}]},uses:{dependencies:a,params:a,parent:a,url:a}}]}}(void 0,"data"))
