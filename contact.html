@@ -6,14 +6,13 @@
 		<meta name="viewport" content="width=device-width" />
 		<meta http-equiv="content-security-policy" content=""><title>FGC Jamaica</title>
 	<link href="./_app/immutable/assets/_layout-dc40b43f.css" rel="stylesheet">
-	<link href="./_app/immutable/assets/_page-0d668284.css" rel="stylesheet">
 	<link rel="modulepreload" href="./_app/immutable/start-2d86cad1.js">
 	<link rel="modulepreload" href="./_app/immutable/chunks/index-6906ca8f.js">
 	<link rel="modulepreload" href="./_app/immutable/chunks/singletons-59e689f3.js">
 	<link rel="modulepreload" href="./_app/immutable/components/pages/_layout.svelte-3545128b.js">
-	<link rel="modulepreload" href="./_app/immutable/components/pages/_page.svelte-f60cd8bd.js">
-	<link rel="modulepreload" href="./_app/immutable/modules/pages/_page.ts-e9fa0128.js">
-	<link rel="modulepreload" href="./_app/immutable/chunks/_page-802cc2a3.js">
+	<link rel="modulepreload" href="./_app/immutable/components/pages/contact/_page.svelte-12cb2472.js">
+	<link rel="modulepreload" href="./_app/immutable/modules/pages/contact/_page.ts-9a550caf.js">
+	<link rel="modulepreload" href="./_app/immutable/chunks/_page-9ef87fc3.js">
 	</head>
 
 	<body>
@@ -39,22 +38,30 @@
 	</li><li class="w-full flex justify-center"><a class="w-full flex justify-center py-3 hover:bg-black" href="/blog">blog</a>
 	</li><li class="w-full flex justify-center"><a class="w-full flex justify-center py-3 hover:bg-black" href="/contact">contact</a>
 	</li></ul></div></nav>
+<main class="flex flex-col container tracking-[0.065em] justify-center mx-auto"><h2 class="text-6xl font-black mb-8"><span class="flex mb-8">We&#39;d Love To Hear From You,</span>
+		<span>Get In Touch <span class="">👋🏾</span></span></h2>
+  <form action="./" method="post" class="container flex flex-col w-full leading-[1.5] font-montserrat mb-8"><div class="container w-full flex flex-col md:flex-row md:gap-2"><div class="flex flex-col mb-8 flex-1"><label class="self-start text-md font-semibold mb-1" for="name">Your Name</label>
 
-<main class="flex flex-col container tracking-[0.065em] justify-center mx-auto"><section class="w-full mb-16"><h1 class="text-center selection:bg-fuchsia-300 selection:text-rich-black text-rich-black font-bebas-neue text-7xl mx-auto leading-14 md:text-9xl"><span class="jamaica text-transparent bg-center bg-no-repeat bg-clip-text bg-cover svelte-1qioe9v">Jamaica&#39;s</span>
-			Official <br>Robotics Team
-		</h1>
-		<h2 class="text-center text-rich-black font-montserrat font-semibold md:text-3xl">Representing Jamaica in the yearly FIRST Global Competition
-		</h2></section>
+	<input class="transistion duration-[250ms] outline-none rounded-sm self-start w-full max-w-full py-3 px-5 font-medium bg-white focus:drop-shadow-md md:flex-1 false" type="text" name="name" id="name" placeholder="John Doe">
+	</div>
+		<div class="flex flex-col mb-8 flex-1"><label class="self-start text-md font-semibold mb-1" for="email">Your Email</label>
+
+	<input class="transistion duration-[250ms] outline-none rounded-sm self-start w-full max-w-full py-3 px-5 font-medium bg-white focus:drop-shadow-md md:flex-1 false" type="text" name="email" id="email" placeholder="johndoe@gmail.com">
+	</div></div>
+	<div class="flex flex-col mb-8 flex-1"><label class="self-start text-md font-semibold mb-1" for="subject">Subject</label>
+
+	<input class="transistion duration-[250ms] outline-none rounded-sm self-start w-full max-w-full py-3 px-5 font-medium bg-white focus:drop-shadow-md md:flex-1 false" type="text" name="subject" id="subject" placeholder="Google Meet Get Together">
+	</div>
+	<div class="flex flex-col mb-8 flex-1"><label class="self-start text-md font-semibold mb-1" for="message">Message</label>
+
 	
+	<textarea class="transistion duration-[250ms] outline-none rounded-sm self-start w-full max-w-full py-3 px-5 bg-white focus:drop-shadow-md h-64 font-medium" name="message" id="message" placeholder="Hi, Would you like to meet with Country Z to talk about our robots..."></textarea></div>
 
-	<div class="flex justify-center px-6 mb-12"><img class="w-full" src="images/hero-img.png" alt="Jamaica's Official Robotics Team"></div>
-	
-	<div class="mb-6 flex justify-center"><a href="/" class="transistion ease-out duration-200 bg-bangladesh-green font-montserrat text-cornsilk font-bold py-2 rounded-sm px-8 hover:bg-north-texas-green hover:scale-x-105">Meet the Team
-		</a></div>
-</main>
+	<button class="mx-auto gap-2 flex transistion duration-[250ms] outline-none rounded-sm self-start max-w-full py-2 px-16 bg-bangladesh-green text-cornsilk hover:bg-north-texas-green hover:scale-105 font-semibold" type="submit">Send
+		<img class="scale-75" src="/_app/immutable/assets/send-icon-d7d5630c.svg" alt="send icon"></button></form></main>
 
 
-		<script type="module" data-sveltekit-hydrate="3vhix8">
+		<script type="module" data-sveltekit-hydrate="14r0vwj">
 		import { start } from "./_app/immutable/start-2d86cad1.js";
 
 		start({
@@ -62,14 +69,14 @@
 			hydrate: {
 				status: 200,
 				error: null,
-				node_ids: [0, 2],
+				node_ids: [0, 5],
 				params: {},
-				routeId: "",
+				routeId: "contact",
 				data: (function(a){return [a,a]}(null)),
 				errors: null
 			},
 			paths: {"base":"","assets":""},
-			target: document.querySelector('[data-sveltekit-hydrate="3vhix8"]').parentNode,
+			target: document.querySelector('[data-sveltekit-hydrate="14r0vwj"]').parentNode,
 			trailing_slash: "never"
 		});
 	</script>
