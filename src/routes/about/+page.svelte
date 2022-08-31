@@ -21,8 +21,8 @@
 	</section>
 	<!-- Team -->
 	<section class="flex flex-col justify-center mb-8 gap-6">
-		<h2 class="text-center text-2xl text-rich-black font-black md:text-3xl mb-6 ">Team Members</h2>
-		<div class="flex flex-col container w-full mx-auto md:flex-row">
+		<h2 class="text-center text-2xl text-rich-black font-black md:text-3xl mb-6">Team Members</h2>
+		<div class="flex flex-col sm::container w-full mx-auto md:flex-row xs:gap-10">
 			<ProfileCard profile={pickedProfile ?? data.profiles[0]} />
 			<ProfilePicker profiles={data.profiles} bind:picked={pickedProfile} />
 		</div>

@@ -8,9 +8,9 @@
 
 <main>
 	<!-- Top Post -->
-	<section class="hidden md:flex container h-[50vh] md:h-[70vh] mx-auto w-full">
+	<section class="hidden md:flex md:container h-[50vh] md:h-[70vh] mx-auto w-full">
 		<!-- Post -->
-		<div class="grid grid-cols-10 grid-rows-1 gap-2 mb-8 container w-full">
+		<div class="grid grid-cols-10 grid-rows-1 gap-2 mb-8 md:container w-full">
 			<!-- Image -->
 			<div class="row-span-full col-end-11 col-span-6 self-center">
 				<img class="object-cover w-full" src={postImg} alt="" />
@@ -63,9 +63,9 @@
 			</div>
 		</div>
 	</section>
-	<section class="container mx-auto">
+	<section class="md:container mx-auto">
 		<!-- Posts -->
-		<section class="w-full flex flex-col container pl-4 md:p-0 ">
+		<section class="w-full flex flex-col md:container pl-4 md:p-0 ">
 			<h2 class="text-2xl font-montserrat font-semibold">Latest Posts</h2>
 
 			<Post />

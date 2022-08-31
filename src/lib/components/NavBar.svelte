@@ -19,7 +19,7 @@
 	<div class="flex items-center justify-between w-full">
 		<!-- Logo -->
 		<h1 class="pl-4 md:p-0 group block pt-2 text-rich-black font-bebas-neue text-3xl relative">
-			<a href="/" class="no-underline group-hover:tex-white"> FGC Jamaica </a>
+			<a href="/" class="no-underline group-hover:underline"> FGC Jamaica </a>
 			<span class="absolute w-full h-2 rounded-full scale-0 bg-blue-900 group-hover:scale-1" />
 		</h1>
 

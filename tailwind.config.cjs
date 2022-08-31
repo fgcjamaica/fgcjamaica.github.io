@@ -1,8 +1,14 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	mode: 'jit',
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
+		screens: {
+			'2xs': { max: '280px' },
+			'xs': { max: '415px' },
+			...defaultTheme.screens,
+		},
 		extend: {
 			fontFamily: {
 				montserrat: ['Montserrat', 'sans-serif'],
@@ -17,7 +23,7 @@ module.exports = {
 				'bangladesh-green': '#017749',
 				'north-texas-green': '#009B3A',
 				dandelion: '#ffd477'
-			}
+			},
 		}
 	},
 	variants: {

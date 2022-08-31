@@ -1,5 +1,5 @@
 <!-- Hero  -->
-<main class="flex flex-col container tracking-[0.065em] justify-center mx-auto">
+<main class="flex flex-col md:container tracking-[0.065em] justify-center mx-auto">
 	<section class="w-full mb-16">
 		<h1
 			class="text-center selection:bg-fuchsia-300 selection:text-rich-black text-rich-black font-bebas-neue text-7xl mx-auto leading-14 md:text-9xl"
