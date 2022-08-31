@@ -1,20 +1,11 @@
-<script lang="ts">
-	import Footer from '$lib/Footer/Footer.svelte';
-import Header from '$lib/Header/Header.svelte';
-import SocialBar from '$lib/SocialBar/SocialBar.svelte';
-	import '../app.scss';
+<script>
+import NavBar from '$lib/components/NavBar.svelte';
+
+	import '../app.css';
 </script>
 
-
-
-<Header />
-<SocialBar/>
-<main>
-	<slot />
-</main>
-
-
-
-<style>
-
-</style>
+<svelte:head>
+	<title>FGC Jamaica</title>
+</svelte:head>
+<NavBar />
+<slot />

@@ -1,34 +1,30 @@
-<svelte:head>
-	<title>About</title>
-	<meta name="description" content="About this app" />
-</svelte:head>
+<script lang="ts">
+	import ProfileCard from '../../lib/components/ProfileCard.svelte';
+	import ProfilePicker from '$lib/components/ProfilePicker.svelte';
+	import profileImg from '$lib/assets/images/profile.png';
+	import type { Profile } from '$lib/types/Profile';
+	export let data: { profiles: Profile[] };
+	let pickedProfile: Profile;
+</script>
 
-<div class="content">
-	<h1>About this app</h1>
-
-	<p>
-		This is a <a href="https://kit.svelte.dev">SvelteKit</a> app. You can make your own by typing the
-		following into your command line and following the prompts:
-	</p>
-
-	<pre>npm create svelte@latest</pre>
-
-	<p>
-		The page you're looking at is purely static HTML, with no client-side interactivity needed.
-		Because of that, we don't need to load any JavaScript. Try viewing the page's source, or opening
-		the devtools network panel and reloading.
-	</p>
-
-	<p>
-		The <a href="/todos">TODOs</a> page illustrates SvelteKit's data loading and form handling. Try using
-		it with JavaScript disabled!
-	</p>
-</div>
-
-<style>
-	.content {
-		width: 100%;
-		max-width: var(--column-width);
-		margin: var(--column-margin-top) auto 0 auto;
-	}
-</style>
+<main class="container mx-auto w-full flex flex-col gap-8 md:gap-12">
+	<!-- Who we are? -->
+	<section class="flex flex-col justify-center mb-8 gap-6">
+		<h2 class="text-center text-2xl text-rich-black font-black md:text-3xl ">Who we are?</h2>
+		<p class="text-center text-rich-black font-montserrat font-semibold md:text-xl">
+			We are a team of high school students from all over Jamaica who are passionate about robotics.
+			We particiapte in the annual <a
+				class="underline text-bangladesh-green"
+				href="https://first.global/">First Global Competition</a
+			>.
+		</p>
+	</section>
+	<!-- Team -->
+	<section class="flex flex-col justify-center mb-8 gap-6">
+		<h2 class="text-center text-2xl text-rich-black font-black md:text-3xl mb-6 ">Team Members</h2>
+		<div class="flex flex-col container w-full mx-auto md:flex-row">
+			<ProfileCard profile={pickedProfile ?? data.profiles[0]} />
+			<ProfilePicker profiles={data.profiles} bind:picked={pickedProfile} />
+		</div>
+	</section>
+</main>
