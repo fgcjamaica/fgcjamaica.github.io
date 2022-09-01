@@ -12,8 +12,8 @@
 		class="relative z-5 p-4 flex flex-col gap-2 col-start-3 col-end-9 row-start-1 row-end-7
 		xs:col-start-1 bg-white rounded-md shadow-sm thin-border"
 	>
-		<img class="thin-border rounded-md p-[0.75px]" src={profileImg} alt="profile" />
-		<h4 class="text-2xl font-bebas-neue tracking-wide">Ajani Hickling</h4>
+		<img class="thin-border rounded-md p-[0.75px]" src={profile.imageUrl} alt="profile" />
+		<h4 class="text-2xl font-bebas-neue tracking-wide">{profile.name}</h4>
 
 		<!-- Decorations -->
 		<span
@@ -40,10 +40,15 @@
 	</div>
 	<!-- Social -->
 	<div
-		class="font-montserrat font-medium thin-border z-10 flex flex-col col-start-1 col-end-4 row-start-3 row-end-6 bg-white rounded-md p-3 xs:col-start-8 xs:col-end-11 xs:row-start-4 xs:row-end-76"
+		class="font-montserrat font-medium thin-border z-10 flex flex-col
+		w-fit col-start-1 row-start-3 row-end-6 bg-white rounded-md p-3 pr-8 xs:col-start-8 xs:col-end-11 xs:row-start-4 xs:row-end-7"
 	>
-		<a>LinkedIn</a>
-		<a>Github</a>
+		{#each profile.socials as { href, icon, name, username }}
+			<a class="flex gap-2" {href}>
+				<img src={icon} alt={name} class="w-4 h-4" />
+				{username}
+			</a>
+		{/each}
 	</div>
 </div>
 
@@ -56,12 +61,15 @@
 		class="relative z-5 p-4 flex flex-col gap-2 col-start-1 col-end-12 row-start-1 row-end-9
 		xs:col-start-1 bg-white rounded-md shadow-sm thin-border"
 	>
-		<img class="thin-border rounded-md p-[0.75px]" src={profileImg} alt="profile" />
+		<img class="thin-border rounded-md p-[0.75px]" src={profile.imageUrl} alt="profile" />
 		<div class="container flex flex-col gap-1">
-			<h4 class="text-2xl font-bebas-neue tracking-wide">Ajani Hickling</h4>
+			<h4 class="text-2xl font-bebas-neue tracking-wide">{profile.name}</h4>
 			<div class="font-montserrat font-medium thin-border z-10 flex w-fit bg-white rounded-md p-1">
-				<a>L</a>
-				<a>G</a>
+				{#each profile.socials as { href, icon, name, username }}
+					<a class="flex" {href}>
+						<img src={icon} alt={name} class="w-4 h-4" />
+					</a>
+				{/each}
 			</div>
 		</div>
 		<!-- Intro -->

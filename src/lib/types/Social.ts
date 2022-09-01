@@ -1,12 +1,6 @@
 export interface Social {
 	name: string;
-	url: string;
+	username: string;
+	href: string;
+	icon: string;
 }
-export type SocialTemplate = (username: string) => Social;
-
-export const socialTemplates = {
-	instagram: (username: string) => ({
-		name: 'Instagram',
-		url: `https://instagram.com/${username}`
-	})
-};

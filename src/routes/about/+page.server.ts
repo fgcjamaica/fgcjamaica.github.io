@@ -1,14 +1,6 @@
-import type { Profile } from '$lib/types/Profile';
-import type PageServerLoad from '@sveltejs/kit';
-import { readFile } from 'fs/promises';
+import { profiles } from '$lib/scripts/profiles';
 export const load = async () => {
 	return {
-		profiles: [
-			{
-				id: 'ajani-hickling',
-				name: 'Ajani Hickling',
-				role: 'Lead Developer'
-			}
-		]
-	};
+		profiles
+	}
 };
