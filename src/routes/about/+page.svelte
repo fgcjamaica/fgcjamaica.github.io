@@ -1,7 +1,6 @@
 <script lang="ts">
 	import ProfileCard from '../../lib/components/ProfileCard.svelte';
 	import ProfilePicker from '$lib/components/ProfilePicker.svelte';
-	import profileImg from '$lib/assets/images/profile.png';
 	import type { Profile } from '$lib/types/Profile';
 	export let data: { profiles: Profile[] };
 	let pickedProfile: Profile;

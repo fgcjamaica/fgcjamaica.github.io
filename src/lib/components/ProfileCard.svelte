@@ -1,5 +1,4 @@
 <script lang="ts">
-	import profileImg from '$lib/assets/images/profile.png';
 	import type { Profile } from '$lib/types/Profile';
 	export let profile: Profile;
 </script>

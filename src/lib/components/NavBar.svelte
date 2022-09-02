@@ -1,8 +1,7 @@
 <script lang="ts">
+	import { afterNavigate } from '$app/navigation';
 	import MenuItems from './MenuItems.svelte';
-
 	import MobileMenu from './MobileMenu.svelte';
-
 	import HamburgerIcon from './HamburgerIcon.svelte';
 
 	let toggle: boolean;
@@ -12,6 +11,9 @@
 		blog: { href: '/blog' },
 		contact: { href: '/contact' }
 	};
+	afterNavigate(() => {
+		toggle = false;
+	});
 </script>
 
 <!-- NavBar -->

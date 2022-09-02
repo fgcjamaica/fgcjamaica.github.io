@@ -1,7 +1,5 @@
 <script lang="ts">
 	import ProfileIcon from './ProfileIcon.svelte';
-
-	import profileImg from '$lib/assets/images/profile.png';
 	import type { Profile } from '$lib/types/Profile';
 	export let profiles: Profile[];
 	export let picked: Profile;

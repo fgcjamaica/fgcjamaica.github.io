@@ -1,8 +1,8 @@
 import type { Social } from './Social';
 
 export interface Profile {
-	id: string;
-	name: string;
-	imageUrl: string;
+	readonly id: string;
+	readonly name: string;
+	readonly imageUrl: string;
 	socials: Social[];
 }

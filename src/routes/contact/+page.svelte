@@ -1,48 +1,31 @@
-<script>
+<script lang="ts">
+	import { goto } from '$app/navigation';
+
+	import axios from 'axios';
+
 	import Form from '../../lib/components/Form.svelte';
+	let isSending = false;
+	let email: string, message: string, name: string, subject: string;
+	async function sendEmail() {
+		isSending = true;
+		type Res = { success: 'true' | 'false'; message: string };
+		const response: Res = (
+			await axios.post('https://formsubmit.co/ajax/fc3952794181a9895bc3351b76ccd179', {
+				name,
+				email,
+				subject,
+				message
+			})
+		).data;
+		if (response.success === 'true') {
+			goto('/contact/thanks');
+		} else {
+			alert('Error trying to send email. Try again later 😔');
+		}
+		isSending = false;
+	}
 </script>
 
-<main class="flex flex-col md:container tracking-[0.065em] justify-center mx-auto">
-	<h2 class="text-6xl font-black  mb-8">
-		<span class="flex mb-8">We'd Love To Hear From You,</span>
-		<span>Get In Touch <span class="wave">👋🏾</span></span>
-	</h2>
-	<Form />
-</main>
-
-<style lang="scss">
-	.wave {
-		animation-name: wave-animation;
-		animation-duration: 2s;
-		animation-iteration-count: infinite;
-		transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
-		display: inline-block;
-	}
-
-	@keyframes wave-animation {
-		0% {
-			transform: rotate(0deg);
-		}
-		10% {
-			transform: rotate(14deg);
-		} /* The following five values can be played with to make the waving more or less extreme */
-		20% {
-			transform: rotate(-8deg);
-		}
-		30% {
-			transform: rotate(14deg);
-		}
-		40% {
-			transform: rotate(-4deg);
-		}
-		50% {
-			transform: rotate(10deg);
-		}
-		60% {
-			transform: rotate(0deg);
-		} /* Reset for the last half to pause */
-		100% {
-			transform: rotate(0deg);
-		}
-	}
-</style>
+<div class="container mx-auto px-3 | xs:px-3 md:px-6">
+	<Form bind:email bind:message bind:name bind:subject {isSending} onSubmit={sendEmail} />
+</div>

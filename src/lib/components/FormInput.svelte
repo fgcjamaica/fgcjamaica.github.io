@@ -1,6 +1,7 @@
 <script lang="ts">
 	export let name: string, label: string, placeholder: string, value: string;
-	export let isLongText: boolean = false;
+	export let isLongText = false;
+	export let isRequired = false;
 </script>
 
 <div class="flex flex-col mb-8 flex-1">
@@ -16,6 +17,7 @@
 			id={name}
 			{placeholder}
 			bind:value
+			required={isRequired}
 		/>
 	{/if}
 	{#if isLongText}
@@ -25,6 +27,7 @@
 			id={name}
 			{placeholder}
 			bind:value
+			required={isRequired}
 		/>
 	{/if}
 </div>
