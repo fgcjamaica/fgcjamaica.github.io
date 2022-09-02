@@ -1,0 +1,1 @@
+window.__sveltekit_data = (function(a,b,c){return {type:c,nodes:[null,{type:c,data:{metadata:{authorId:"ajani-hickling",slug:a,tags:["markdown",a],title:"Test Post",imageUrl:a,datePublished:"1 September 2020",readTime:"12"},content:"# Hello from Markdown\n"},uses:{dependencies:b,params:["slug"],parent:b,url:b}}]}}("test",void 0,"data"))
