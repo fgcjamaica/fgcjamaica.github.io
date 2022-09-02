@@ -1,3 +1,7 @@
+<script lang="ts">
+	import { afterNavigate, goto } from '$app/navigation';
+</script>
+
 <!-- Hero  -->
 <main class="flex flex-col md:container tracking-[0.065em] justify-center mx-auto">
 	<section class="w-full mb-16">
@@ -21,7 +25,8 @@
 	<!-- Call to Action -->
 	<div class="mb-6 flex justify-center">
 		<a
-			href="/"
+			id="meet-team"
+			href="/about/#team"
 			class="transistion ease-out duration-200 bg-bangladesh-green font-montserrat text-cornsilk font-bold py-2 rounded-sm px-8 hover:bg-north-texas-green hover:scale-x-105"
 		>
 			Meet the Team

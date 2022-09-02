@@ -1,4 +1,3 @@
-import moment from 'moment';
 type Params = {
 	author_id: string;
 	slug: string;
@@ -22,6 +21,11 @@ export const parseArticleMetaData = ({
 	tags,
 	title,
 	imageUrl: `${image_name}`,
-	datePublished: moment(date_published).format('MMM Do YYYY'),
+	datePublished: new Date(date_published).toLocaleDateString('en-gb', {
+		timeZone: 'utc',
+		year: 'numeric',
+		month: 'long',
+		day: 'numeric'
+	}),
 	readTime: String(readTime)
 });

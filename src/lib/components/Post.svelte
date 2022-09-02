@@ -5,21 +5,23 @@
 	import type { Profile } from '$lib/types/Profile';
 	import { onMount } from 'svelte';
 	export let metadata: ArticleMetaData;
-	$: postImg = null as unknown as { default: string };
-	$: author = null as unknown as Profile;
+	let postImg: { default: string };
+	let author: Profile;
 	onMount(async () => {
-		const response = await axios.get(`/api/profile`, { params: { id: metadata.authorId } });
+		const response = await axios.get(`/api/profile?id=${metadata.authorId}`, {
+			params: { id: metadata.authorId }
+		});
 		author = await response.data;
 
 		postImg = await import(`../../routes/blog/[slug]/articles/images/${metadata.imageUrl}.jpg`);
-		console.log(postImg);
-		console.log(author);
+		console.log({ postImg, author });
 	});
+	let postUrl = `/blog/${metadata.slug}`;
+	$: console.log({ metadata, author, postImg, postUrl });
 </script>
 
-
 <!-- Post Mobile and Larger -->
-<a href={`/blog/${metadata.slug}`} class="xs:hidden 2xs:hidden flex gap-2 mb-8 cursor-pointer">
+<a href={postUrl} class="xs:hidden 2xs:hidden flex gap-2 mb-8 cursor-pointer">
 	<!-- Image -->
 	<img class=" self-start w-[50%]" src={postImg?.default} alt="" />
 
@@ -49,7 +51,7 @@
 		</div>
 		<!-- Call To Action -->
 		<div class="transistion duration-200 flex flex-col mb-4">
-			<a href={`/blog/${metadata.slug}`} class="group flex gap-1 items-center">
+			<a href={postUrl} class="group flex gap-1 items-center">
 				<span
 					class="capitalize text-bangladesh-green font-semibold transistion duration-200  group-hover:underline md:text-xl "
 					>Read full Article</span
@@ -70,9 +72,8 @@
 	</div>
 </a>
 
-
 <!-- Xtra Small Screens -->
-<a href={`/blog/${metadata.slug}`} class="xs:flex 2xs:flex flex-col gap-2 mb-8 cursor-pointer hidden">
+<a href={postUrl} class="xs:flex 2xs:flex flex-col gap-2 mb-8 cursor-pointer hidden">
 	<!-- Image -->
 	<img class=" self-start w-[80%]" src={postImg?.default} alt="" />
 
@@ -102,7 +103,7 @@
 		</div>
 		<!-- Call To Action -->
 		<div class="transistion duration-200 flex flex-col mb-4">
-			<a href={`/blog/${metadata.slug}`} class="group flex gap-1 items-center">
+			<a href={postUrl} class="group flex gap-1 items-center">
 				<span
 					class="capitalize text-bangladesh-green font-semibold transistion duration-200  group-hover:underline md:text-xl "
 					>Read full Article</span

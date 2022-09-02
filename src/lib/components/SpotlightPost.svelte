@@ -5,18 +5,17 @@
 	import axios from 'axios';
 	import type { Profile } from '$lib/types/Profile';
 	export let metadata: ArticleMetaData;
-	$: postImg = null as unknown as string;
-	$: author = null as unknown as Profile;
+	let postImg: string;
+	let author: Profile;
 	onMount(async () => {
-		const response = await axios.get(`/api/profile`, { params: { id: metadata.authorId } });
-		console.log(response);
+		const response = await axios.get(`/api/profile?id=${metadata.authorId}`, { params: { id: metadata.authorId } });
 		author = await response.data;
 
 		postImg = (await import(`../../routes/blog/[slug]/articles/images/${metadata.imageUrl}.jpg`))
 			.default;
-		console.log(postImg);
-		console.log(author);
+		console.log({ postImg, author });
 	});
+	$: console.log({ metadata, author, postImg });
 </script>
 
 <!-- Post as Spotlight -->

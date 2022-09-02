@@ -1,7 +1,7 @@
 <script lang="ts">
-	import SpotlightPost from '../../lib/components/SpotlightPost.svelte';
+	import SpotlightPost from '$lib/components/SpotlightPost.svelte';
 
-	import Post from '../../lib/components/Post.svelte';
+	import Post from '$lib/components/Post.svelte';
 
 	import type { PageServerLoad } from './+page.server';
 	export let data: PageServerLoad;
@@ -20,7 +20,7 @@
 			<h2 class="text-2xl font-montserrat font-semibold">Latest Posts</h2>
 
 			{#each posts as metadata}
-				<div class="flex container w-full xs:flex 2xs:flex md:hidden">
+				<div class="flex container w-full xs:flex 2xs:flex">
 					<Post {metadata} />
 				</div>
 			{/each}

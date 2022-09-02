@@ -1,7 +1,7 @@
 ---
 title: How to Program in Python 3
 author_id: ajani-hickling
-date_published: September 1, 2022
+date_published: 2022-09-1
 readTime: 4
 tags: [python, programming, how to]
 image_name: test
