@@ -8,6 +8,7 @@
 
 	import type { PageLoad } from './+page.server';
 	import SvelteMarkdown from 'svelte-markdown';
+	import { getProfile } from '$lib/scripts/profiles';
 	const source = `
   # This is a header
 
@@ -25,12 +26,7 @@ This is a paragraph.
 | With two    | columns |`;
 
 	export let data: PageLoad;
-	let author: Profile;
-	onMount(async () => {
-		const response = await axios.get(`/api/profile?id=${data.metadata.authorId}`, { params: { id: data.metadata.authorId } });
-		author = await response.data;
-		console.log({ author });
-	});
+	const author = getProfile({ id: data.metadata.authorId });
 </script>
 
 <article class="prose lg:prose-xl px-8 m-auto my-4 sm:my-16">

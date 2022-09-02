@@ -4,20 +4,15 @@
 	import type { ArticleMetaData } from '$lib/types/Article';
 	import type { Profile } from '$lib/types/Profile';
 	import { onMount } from 'svelte';
+import { getProfile } from '$lib/scripts/profiles';
 	export let metadata: ArticleMetaData;
 	let postImg: { default: string };
-	let author: Profile;
+	let author = getProfile({id:metadata.authorId});
 	onMount(async () => {
-		const response = await axios.get(`/api/profile?id=${metadata.authorId}`, {
-			params: { id: metadata.authorId }
-		});
-		author = await response.data;
 
 		postImg = await import(`../../routes/blog/[slug]/articles/images/${metadata.imageUrl}.jpg`);
-		console.log({ postImg, author });
 	});
 	let postUrl = `/blog/${metadata.slug}`;
-	$: console.log({ metadata, author, postImg, postUrl });
 </script>
 
 <!-- Post Mobile and Larger -->

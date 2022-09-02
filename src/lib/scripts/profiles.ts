@@ -1,5 +1,6 @@
 import { github, instagram } from './socials';
 import ajaniHickling from '$lib/assets/images/ajani-hickling.png';
+import type { Profile } from '$lib/types/Profile';
 const profilesWithoutImage = [
 	{
 		id: 'ajani-hickling',
@@ -28,3 +29,11 @@ export const profiles = profilesWithoutImage;
 // 		} as const;
 // 	})
 // );
+
+export const getProfile = ({ id }: { id: string }): Profile => {
+	const profile = profiles.find((profile) => profile.id === id);
+	if (!profile) {
+		throw new Error(`Profile not found: ${id}`);
+	}
+	return profile as unknown as Profile;
+};

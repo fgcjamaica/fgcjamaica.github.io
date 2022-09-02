@@ -4,18 +4,14 @@
 	import { onMount } from 'svelte';
 	import axios from 'axios';
 	import type { Profile } from '$lib/types/Profile';
+import { getProfile } from '$lib/scripts/profiles';
 	export let metadata: ArticleMetaData;
 	let postImg: string;
-	let author: Profile;
+	let author = getProfile({ id: metadata.authorId });
 	onMount(async () => {
-		const response = await axios.get(`/api/profile?id=${metadata.authorId}`, { params: { id: metadata.authorId } });
-		author = await response.data;
-
 		postImg = (await import(`../../routes/blog/[slug]/articles/images/${metadata.imageUrl}.jpg`))
 			.default;
-		console.log({ postImg, author });
 	});
-	$: console.log({ metadata, author, postImg });
 </script>
 
 <!-- Post as Spotlight -->
