@@ -1,0 +1,1 @@
+import{_ as s}from"./_page-c8196999.js";import{default as f}from"../components/pages/about/_page.svelte-8f3a47ee.js";import"./index-401b77de.js";import"./stores-c3c75508.js";import"./singletons-48a2a5ac.js";const e=!0;export{f as component,e as server,s as shared};
