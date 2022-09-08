@@ -24,7 +24,7 @@
 		<h2 class="text-center text-2xl text-rich-black font-black md:text-3xl ">Who we are?</h2>
 		<p class="text-center text-rich-black font-montserrat font-semibold md:text-xl">
 			We are a team of high school students from all over Jamaica who are passionate about robotics.
-			We particiapte in the annual <a
+			We participate in the annual <a
 				class="underline text-bangladesh-green"
 				href="https://first.global/">First Global Competition</a
 			>.
