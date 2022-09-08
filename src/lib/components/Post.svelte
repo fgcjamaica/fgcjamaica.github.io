@@ -41,7 +41,7 @@ import { getProfile } from '$lib/scripts/profiles';
 
 			<div class="flex gap-2 items-center">
 				<img class="w-8 rounded-full" src={author?.imageUrl} alt="author" />
-				<h6 class="text-sm font-normal text-rich-black font-montserrat">Ajani Hickling</h6>
+				<h6 class="text-sm font-normal text-rich-black font-montserrat">{author.name}</h6>
 			</div>
 		</div>
 		<!-- Call To Action -->
@@ -93,7 +93,7 @@ import { getProfile } from '$lib/scripts/profiles';
 
 			<div class="flex gap-2 items-center">
 				<img class="w-8 rounded-full" src={author?.imageUrl} alt="author" />
-				<h6 class="text-sm font-normal text-rich-black font-montserrat">Ajani Hickling</h6>
+				<h6 class="text-sm font-normal text-rich-black font-montserrat">{author.name}</h6>
 			</div>
 		</div>
 		<!-- Call To Action -->
