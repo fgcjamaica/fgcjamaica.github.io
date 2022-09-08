@@ -33,10 +33,9 @@ const profilesWithoutImage = [
 
 ];
 const loadProfileImageUrl = async ({ id }: { id: string }): Promise<string> => {
-	const image = await import(`$lib/assets/images/profiles/${id}.jpg`);
+	const image = await import(`$lib/assets/images/profiles/${id}.webp`);
 	return image.default;
 };
-// export const profiles = profilesWithoutImage;
 
 export const profiles = await Promise.all(
 	profilesWithoutImage.map(async (profile) => {
