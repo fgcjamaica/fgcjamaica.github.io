@@ -1,5 +1,6 @@
 import { github, instagram } from './socials';
 import type { Profile } from '$lib/types/Profile';
+import type { Social } from '$lib/types/Social';
 const profilesWithoutImage = [
 	{
 		name: "Paul Pounall",
@@ -12,7 +13,7 @@ const profilesWithoutImage = [
 	},
 	{
 		name: "Stephanie Williams",
-		socials:[instagram('_stephnathwill_')],
+		socials: [instagram('_stephnathwill_')],
 		intro: "Hi! I'm Steph, the Team Captain and Engineer. Immaculate Conception High School."
 	},
 	{
@@ -22,7 +23,7 @@ const profilesWithoutImage = [
 	},
 	{
 		name: 'Chelsea Rerrie',
-		socials: [ github('cherry-java'),instagram('cherrysoda.jpeg')],
+		socials: [github('cherry-java'), instagram('cherrysoda.jpeg')],
 		intro: "Hi! I'm Chels. Spokesperson and programmer dabbling in CAD. Coming from Immaculate Conception High School."
 	},
 	{
@@ -32,18 +33,22 @@ const profilesWithoutImage = [
 	},
 
 ];
-const loadProfileImageUrl = async ({ id }: { id: string }): Promise<string> => {
+const loadProfileImageUrl = async ({ id }: { id: string }) => {
 	const image = await import(`$lib/assets/images/profiles/${id}.webp`);
-	return image.default;
+	const featimage = await import(`$lib/assets/images/profiles/${id}--feat.webp`);
+	return {
+		imageUrl: image.default as string,
+		featImageUrl: featimage.default as string
+	} as const;
 };
 
-export const profiles = await Promise.all(
+export const profiles: Profile[] = await Promise.all(
 	profilesWithoutImage.map(async (profile) => {
 		const id = profile.name.toLowerCase().replace(/ /g, '-');
 		return {
-			...profile,
 			id,
-			imageUrl: await loadProfileImageUrl({ id })
+			...profile,
+			...await loadProfileImageUrl({ id })
 		} as const;
 	})
 );

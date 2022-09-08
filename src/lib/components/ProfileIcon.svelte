@@ -5,5 +5,5 @@
 </script>
 
 <div class="rounded-full w-14 aspect-1 cursor-pointer" on:click={onClick}>
-	<img class="rounded-full" src={profile.imageUrl} alt={`profile of ${profile.name}`} />
+	<img class="rounded-full" src={profile.featImageUrl} alt={`profile of ${profile.name}`} />
 </div>
