@@ -24,6 +24,7 @@
 					<Post {metadata} />
 				</div>
 			{/each}
+			<h5 class="mt-6 mx-auto font-montserrat text-xl">No more posts, sorry 😔</h5>
 		</section>
 		<!-- Search -->
 	</section>

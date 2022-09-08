@@ -20,7 +20,7 @@ import { getProfile } from '$lib/scripts/profiles';
 >
 	<!-- Image -->
 	<div class="row-span-full col-end-11 col-span-6 self-center">
-		<img class="object-cover w-full" src={postImg} alt="" />
+		<img class="object-cover w-full  rounded-md" src={postImg} alt="" />
 	</div>
 	<!-- Info -->
 	<div

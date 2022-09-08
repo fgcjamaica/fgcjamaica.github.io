@@ -35,20 +35,24 @@
 	<div
 		class="font-montserrat text-sm thin-border z-10 flex gap-2 col-start-7 col-end-12 row-start-2 row-end-3 xs:col-start-6 bg-white p-3 rounded-md"
 	>
-		<p>Hey! I'm a first year student at AISK. I serve as the Deputy Spokesperson and programmer.</p>
+		<p>{profile.intro}</p>
 	</div>
 	<!-- Social -->
-	<div
-		class="font-montserrat font-medium thin-border z-10 flex flex-col
+	{#if profile.socials}
+		<div
+			class="font-montserrat font-medium thin-border z-10 flex flex-col
 		w-fit col-start-1 row-start-3 row-end-6 bg-white rounded-md p-3 pr-8 xs:col-start-8 xs:col-end-11 xs:row-start-4 xs:row-end-7"
-	>
-		{#each profile.socials as { href, icon, name, username }}
-			<a class="flex gap-2" {href}>
-				<img src={icon} alt={name} class="w-4 h-4" />
-				{username}
-			</a>
-		{/each}
-	</div>
+		>
+			{#each profile.socials as { href, icon, name, username }}
+				<a class="flex gap-2" {href}>
+					<img src={icon} alt={name} class="w-4 h-4" />
+					<span class="whitespace-nowrap">
+						{username}
+					</span>
+				</a>
+			{/each}
+		</div>
+	{/if}
 </div>
 
 <!-- 2Xtra small screens -->
@@ -63,20 +67,24 @@
 		<img class="thin-border rounded-md p-[0.75px]" src={profile.imageUrl} alt="profile" />
 		<div class="container flex flex-col gap-1">
 			<h4 class="text-2xl font-bebas-neue tracking-wide">{profile.name}</h4>
-			<div class="font-montserrat font-medium thin-border z-10 flex w-fit bg-white rounded-md p-1">
-				{#each profile.socials as { href, icon, name, username }}
-					<a class="flex" {href}>
-						<img src={icon} alt={name} class="w-4 h-4" />
-					</a>
-				{/each}
-			</div>
+			{#if profile.socials}
+				<div
+					class="font-montserrat font-medium thin-border z-10 flex w-fit bg-white rounded-md p-1"
+				>
+					{#each profile.socials as { href, icon, name, username }}
+						<a class="flex" {href}>
+							<img src={icon} alt={name} class="w-4 h-4" />
+						</a>
+					{/each}
+				</div>
+			{/if}
 		</div>
 		<!-- Intro -->
 		<div
 			class="font-montserrat text-sm z-10 flex gap-2 col-start-1 col-end-12 row-start-6 row-end-7 bg-white rounded-md"
 		>
 			<p>
-				Hey! I'm a first year student at AISK. I serve as the Deputy Spokesperson and programmer.
+				{profile.intro}
 			</p>
 		</div>
 		<!-- Decorations -->

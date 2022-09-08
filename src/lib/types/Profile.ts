@@ -4,5 +4,6 @@ export interface Profile {
 	readonly id: string;
 	readonly name: string;
 	readonly imageUrl: string;
+	readonly intro: string;
 	socials: Social[];
 }
