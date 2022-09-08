@@ -7,7 +7,7 @@ const profilesWithoutImage = [
 	},
 	{
 		name: "Gavin Samuels",
-		intro: "Greetings! I'm Gavin, the Head coach. Jamaica College Alumnus. 8+ years coacjing experience."
+		intro: "Greetings! I'm Gavin, the Head coach. Jamaica College Alumnus. 8+ years coaching experience."
 
 	},
 	{
